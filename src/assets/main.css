@@ -10,6 +10,10 @@
   font-weight: 500;
 }
 
+body {
+  background-color: #F2F2F2;
+}
+
 /* a,
 .green {
   text-decoration: none;
