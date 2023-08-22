@@ -4,7 +4,7 @@
       <div v-show="modalActive"
         class="absolute w-full bg-black bg-opacity-30 h-screen top-0 left-0 flex justify-center px-8">
         <Transition name="modal-inner">
-          <div v-if="modalActive" class="p-4 bg-white self-start mt-32 max-w-screen-md">
+          <div v-if="modalActive" class="p-4 bg-white self-start mt-32 max-w-screen-lg rounded">
             <button @click="$emit('closeModal'); $emit('stopVideo');" type="button"
               class="float-right text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center">
               <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
@@ -14,10 +14,10 @@
               <span class="sr-only">Close modal</span>
             </button>
             <div class="text-black">
-              <div class="grid gap-2 grid-cols-2">
-                <div>
+              <div class="grid gap-1 md:gap-2 grid-cols-1 md:grid-cols-2 items-center">
+                <div class="mr-5">
                   <iframe v-if="props.play_video" :src="'https://www.youtube.com/embed/' + props.external_id + '?autoplay=1'"
-                    width="100%" height="250" class="embed-responsive-item" frameborder="0" allow="autoplay"></iframe>
+                    width="100%" height="320" class="embed-responsive-item" frameborder="0" allow="autoplay"></iframe>
                   <div class="max-w-[492px] max-h-[308px] m-[25px] float-left" v-if="!props.play_video">
                     <div class="relative">
                       <button class="absolute inset-y-0 left-[41%]" @click="$emit('playVideo')">
@@ -42,7 +42,7 @@
                   <div class="mt-[10px] font-bold">
                     <h1>{{ props.title }}</h1>
                   </div>
-                  <div class="mt-[40px] overflow-x-auto max-h-[48vh] text-justify">
+                  <div class="mt-[40px] overflow-x-auto max-h-[30vh] text-justify">
                     <h3 class="mr-[10px]">{{ props.description }}</h3>
                   </div>
                 </div>
