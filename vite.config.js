@@ -13,5 +13,5 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
   },
-  base: 'https://amortega.github.io/videos-app-frontend/'
+  base: 'http://test-apps.xyz/'
 })
