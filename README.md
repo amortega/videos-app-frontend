@@ -1,28 +1,26 @@
-# videos-app
+# videos-app-frontend
 
-This template should help get you started developing with Vue 3 in Vite.
+Frontend para interactuar con listas de reproducción de YouTube, desarrollado con Vue 3 utilizando Vite.
 
-## Recommended IDE Setup
+## Configuración del proyecto
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+### Crear archivo ".env" con los siguientes datos, ejemplo:
+```sh
+VITE_API_URL='http://localhost:3000/api/v1'
+```
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
+### Instalar dependencias:
 ```sh
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+### Compilar con Hot-Reload para desarrollo.
 
 ```sh
 npm run dev
 ```
 
-### Compile and Minify for Production
+### Compilar versión minificada para producción
 
 ```sh
 npm run build
