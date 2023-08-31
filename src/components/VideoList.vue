@@ -214,7 +214,9 @@ const changeScroll = (action) => {
                 :external_id="video.external_id" 
                 :thumbnail_image="video.thumbnail_image"
                 :format_duration="video.format_duration" 
-                :play_video="video.play_video" />
+                :play_video="video.play_video" 
+                :embed_url="video.embed_url"
+                />
                 
                 <DeleteModal 
                 @close-modal-delete="video.modal_delete_active = false; changeScroll('closeModal');"

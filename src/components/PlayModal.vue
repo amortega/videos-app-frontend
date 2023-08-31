@@ -16,7 +16,9 @@
             <div class="text-black">
               <div class="grid gap-1 md:gap-2 grid-cols-1 md:grid-cols-2 items-center">
                 <div class="mr-5">
-                  <iframe v-if="props.play_video" :src="'https://www.youtube.com/embed/' + props.external_id + '?autoplay=1'"
+                  <!-- <iframe v-if="props.play_video" :src="'https://www.youtube.com/embed/' + props.external_id + '?autoplay=1'"
+                    width="100%" height="320" class="embed-responsive-item" frameborder="0" allow="autoplay"></iframe> -->
+                  <iframe v-if="props.play_video" :src="props.embed_url"
                     width="100%" height="320" class="embed-responsive-item" frameborder="0" allow="autoplay"></iframe>
                   <div class="max-w-[492px] max-h-[308px] m-[25px] float-left" v-if="!props.play_video">
                     <div class="relative">
@@ -81,6 +83,10 @@ const props = defineProps({
     default: ''
   },
   format_duration: {
+    type: String,
+    default: ''
+  },
+  embed_url: {
     type: String,
     default: ''
   },

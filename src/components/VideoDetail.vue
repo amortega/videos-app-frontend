@@ -22,6 +22,7 @@
             :thumbnail_image="props.thumbnail_image"
             :format_duration="props.format_duration"
             :play_video="props.play_video"
+            :embed_url="props.embed_url"
         />
     </div>
 </template>
@@ -61,7 +62,11 @@ const props = defineProps({
     external_id: {
         type: String,
         default: ''
-    }
+    },
+    embed_url: {
+        type: String,
+        default: ''
+    },
 });
 </script>
 
